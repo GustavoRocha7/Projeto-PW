@@ -1,0 +1,44 @@
+body {
+    padding: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+#lista-de-tarefas {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+}
+
+.apagando {
+    animation: fadeout 1s;
+}
+
+@keyframes fadeout {
+    to { opacity: 0; }
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+.nes-container.with-title.is-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nes-container.with-title.is-centered button {
+    margin-top: 1rem;
+}

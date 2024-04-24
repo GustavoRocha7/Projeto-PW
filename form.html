@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/form.css">
+    <script src="./js/cadastrar.js" defer></script>
+    <title>Novo Pokemon</title>
+</head>
+
+<body>
+
+    <h2>Cadastrar Pokémon</h2>
+
+    <form action="">
+        <div class="nes-field">
+            <label for="numero">Número</label>
+            <input type="number" id="numero" class="nes-input">
+            <span id="numero-error" class="nes-text is-error"></span>
+        </div>
+        <div class="nes-field">
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" class="nes-input">
+            <span id="nome-error" class="nes-text is-error"></span>
+        </div>
+        <div class="nes-field">
+            <label for="elemento">Elemento</label>
+            <input type="text" id="elemento" class="nes-input">
+            <span id="elemento-error" class="nes-text is-error"></span>
+        </div>
+        <div class="nes-field">
+            <label for="altura">Altura</label>
+            <input type="number" id="altura" class="nes-input">
+            <span id="altura-error" class="nes-text is-error"></span>
+        </div>
+        <div class="nes-field">
+            <label for="peso">Peso</label>
+            <input type="number" id="peso" class="nes-input">
+            <span id="peso-error" class="nes-text is-error"></span>
+        </div>
+        <div class="nes-field">
+            <label for="especie">Espécie</label>
+            <input type="text" id="especie" class="nes-input">
+            <span id="especie-error" class="nes-text is-error"></span>
+        </div>
+
+        <div class="botoes">
+            <a class="nes-btn" href="/">cancelar</a>
+            <button id="botao-cadastrar" type="button" class="nes-btn is-primary">
+                cadastrar
+            </button>
+        </div>
+    </form>
+
+</body>
+
+</html>
