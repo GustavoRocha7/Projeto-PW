@@ -6,11 +6,14 @@ document
 
         const pokemon = {
             numero: form.numero.value,
+            img: form.imagem.value,
             nome: form.nome.value,
             elemento: form.elemento.value,
             altura: form.altura.value, 
             peso: form.peso.value, 
-            especie: form.especie.value
+            especie: form.especie.value,
+            partidas: 0,
+            abates: 0
         }
         
         if(validar(pokemon)){
@@ -35,6 +38,11 @@ function validar(pokemon){
     if (pokemon.nome === ""){
         document.querySelector("#nome").classList.add("is-error");
         document.querySelector("#nome-error").innerText = "O nome é obrigatório";
+        valid = false;
+    }
+    if (pokemon.img === ""){
+        document.querySelector("#imagem").classList.add("is-error");
+        document.querySelector("#img-error").innerText = "Imagem é obrigatório";
         valid = false;
     }
     if (pokemon.elemento === ""){

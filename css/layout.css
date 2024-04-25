@@ -8,12 +8,29 @@ nav {
     margin-bottom: 2rem;
 }
 
-#lista-de-tarefas {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1rem;
+.butao {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
 }
 
+.butao p {
+    margin-top: 2rem;
+}
+
+.butao button {
+    margin-left: 1rem;
+    border: none;
+}
+.teste{
+    margin-bottom: 1rem;
+}
+
+#lista-de-tarefas{
+    width: 1300px;
+    margin-left: 15rem;
+    margin-top: 3rem;
+}
 .apagando {
     animation: fadeout 1s;
 }
@@ -35,8 +52,8 @@ nav {
 
 .nes-container.with-title.is-centered {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .nes-container.with-title.is-centered button {

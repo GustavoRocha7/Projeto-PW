@@ -5,14 +5,21 @@ const pokemons = JSON.parse(localStorage.getItem("pokemons")) || [];
 pokemons.forEach((pokemon) => {
     const card = document.createElement("div");
     card.id = `pokemon-${pokemon.numero}`;
-    card.classList.add("nes-container", "with-title", "is-centered");
+    card.classList.add("nes-container", "with-title", "is-centered","teste");
+  
 
     card.innerHTML = `
+    &nbsp;
+    <div>
             <p class="title">#${pokemon.numero}</p>
             <p>${pokemon.nome}</p>
+            <div class="nes-container is-rounded">
+                <img src="${pokemon.img}" alt="" width="150">
+            </div>
             <p>Elemento: ${pokemon.elemento}</p>
+            </div>
             <div class="nes-table-responsive">
-                <table class="nes-table is-bordered is-centered">
+                <table class="nes-table is-bordered is-centered" style="margin-top:6rem;">
                     <tbody>
                         <tr>
                             <td>Altura</td>
@@ -29,7 +36,19 @@ pokemons.forEach((pokemon) => {
                     </tbody>
                 </table>
             </div>
-            <button onClick="apagar('${pokemon.numero}')" type="button" class="nes-btn is-error">Apagar</button>
+            <div style="margin-top: 5rem;">
+            <div class="butao">
+            <p class="part">Partidas: ${pokemon.partidas}</p>
+            <button onClick="decP('${pokemon.numero}')"type="button">-</button>
+            <button onClick="incP('${pokemon.numero}')" type="button">+</button>
+        </div>
+        <div class="butao">
+            <p class="ab">Abates: ${pokemon.abates}</p>
+            <button onClick="decA('${pokemon.numero}')"type="button">-</button>
+            <button onClick="incA('${pokemon.numero}')"type="button">+</button>
+        </div>
+        </div>
+        <button onClick="apagar('${pokemon.numero}')" type="button" class="nes-btn is-error" style="height: 50px;margin-top: 8rem">Apagar</button>
     `;
 
     document.querySelector("#lista-de-tarefas").appendChild(card);
